@@ -12,7 +12,7 @@ steps:
   build:
     title: Packaging Jar file
     stage: build
-    image: gradle:4.7.0-jdk8-alpine
+    image: gradle:4.10.0-jdk8-alpine
     commands:
      - gradle build --no-daemon
   
