@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  web:
+    image: "778129680386.dkr.ecr.us-east-1.amazonaws.com/gumgum/ops/${DRONE_REPO_NAME}:${DRONE_COMMIT_SHA}"
+    labels:
+      SERVICE_8080_NAME:
+        "$SERVICE_NAME"
+      SERVICE_8080_TAGS:
+        "$CLUSTER.enable=true,$CLUSTER.frontends.A.rule=Host:$URL_DOMAIN_A;PathPrefixStrip:/$URL_PATH_A,$CLUSTER.frontends.B.rule=Host:$URL_DOMAIN_B;PathPrefixStrip:/$URL_PATH_B;"
+    mem_limit: 2048M
+    mem_reservation: 1024M
+    ports:
+      - "8080"
+    command:
+      - "--spring.config.location=classpath:/application$ENV.properties"
+

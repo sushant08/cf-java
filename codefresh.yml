@@ -1,0 +1,18 @@
+version: "1.0"
+stages:
+  - "clone"
+  - "build"
+steps:
+  main_clone:
+    type: "git-clone"
+    description: "Cloning main repository..."
+    repo: "sushant08/cf-java"
+    revision: "${{CF_BRANCH}}"
+    stage: "clone"
+  build:
+    title: Packaging Jar file
+    stage: build
+    image: gradle:4.7.0-jdk8-alpine
+    commands:
+     - gradle build --no-daemon
+  
