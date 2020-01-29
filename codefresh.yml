@@ -14,5 +14,6 @@ steps:
     stage: build
     image: gradle:4.10.0-jdk8-alpine
     commands:
-     - gradle build --no-daemon
+     - gradlew -Dorg.gradle.daemon=false test
+     - gradlew -g gradle-user-home -Dorg.gradle.daemon=false build jacocoTestReport
   
