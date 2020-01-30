@@ -4,7 +4,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "test"{
-    ami                         = "ami-03caa3f860895f82e"
+    ami                         = "ami-062f7200baf2fa504"
     instance_type               = "t2.micro"
     ebs_optimized               = false
     key_name                    = "sushantkeypair"
