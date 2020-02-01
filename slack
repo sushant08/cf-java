@@ -1,0 +1,17 @@
+[{
+    "fallback": "Deployed to Staging environment",
+    "color": "good",
+    "pretext": "Added XYZ to feature-104",
+    "author_name": "Auto Deploy Robot",
+    "author_link": "https://cloudposse.com/wp-content/uploads/sites/29/2018/02/small-cute-robot-square.png",
+    "author_icon": "https://cloudposse.com/wp-content/uploads/sites/29/2018/02/small-cute-robot-square.png",
+    "title": "test",
+    "title_link": "test",
+    "thumb_url": "https://cloudposse.com/wp-content/uploads/sites/29/2018/02/SquareLogo2.png",
+    "footer": "test",
+    "fields": [{"title": "Project", "value": "Awesome Project", "short": true}, {
+        "title": "Environment",
+        "value": "production",
+        "short": true
+    }]
+}]
