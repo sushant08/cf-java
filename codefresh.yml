@@ -25,6 +25,8 @@ steps:
       SLACK_HOOK_URL: '${{SLACK_WEBHOOK_URL}}'
       SLACK_TEXT: 'Test'
       SLACK_ATTACHMENTS: '${{SLACK_ATTACHMENTS}}'
+    commands:
+      - ls -l
 
 
 
