@@ -22,7 +22,7 @@ steps:
     stage: notify
     arguments:
       SLACK_HOOK_URL: '${{SLACK_WEBHOOK_URL}}'
-      SLACK_TEXT: 'This is test message'
+      SLACK_ATTACHMENTS: cf-java/slack.json
 
 
 
