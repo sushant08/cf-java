@@ -23,7 +23,7 @@ steps:
     stage: notify
     image: 'codefreshplugins/slack-message-sender:0.1'
     commands:
-      - slack-message-sender send --webhook-url https://hooks.slack.com/services/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 --message "My message"
+      - slack-message-sender send --webhook-url https://hooks.slack.com/services/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 --message "My Test message"
 
 
 
