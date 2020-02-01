@@ -18,11 +18,11 @@ steps:
     commands:
       - terraform plan infrasturcture
   SendToSlack:
-  type: slack-notifier
-  stage: notify
-  arguments:
-    SLACK_HOOK_URL: '${{SLACK_WEBHOOK_URL}}'
-    SLACK_TEXT: 'This is test message'
+    type: slack-notifier
+    stage: notify
+    arguments:
+      SLACK_HOOK_URL: '${{SLACK_WEBHOOK_URL}}'
+      SLACK_TEXT: 'This is test message'
 
 
 
