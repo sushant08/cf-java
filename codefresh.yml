@@ -19,14 +19,12 @@ steps:
       - terraform init infrasturcture
       - terraform plan infrasturcture
   SendToSlack:
-    type: slack-notifier
+sendSlack:
+    title: notifySlack
     stage: notify
-    arguments:
-      SLACK_HOOK_URL: '${{SLACK_WEBHOOK_URL}}'
-      SLACK_TEXT: 'Test'
-      SLACK_ATTACHMENTS: '${{SLACK_ATTACHMENTS}}'
+    image: 'codefreshplugins/slack-message-sender:0.1'
     commands:
-      - ls -l
+      - slack-message-sender send --webhook-url https://hooks.slack.com/services/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 --message "My message"
 
 
 
