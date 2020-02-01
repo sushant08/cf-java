@@ -3,6 +3,7 @@ fail_fast: false
 stages:
   - "clone"
   - "infra_build"
+  - "notify"
 steps:
   main_clone:
     type: "git-clone"
@@ -15,8 +16,13 @@ steps:
     title: Deploying Terraform plan
     stage: infra_build
     commands:
-      - terraform init infrasturcture
-      - terraform apply -auto-approve infrasturcture
+      - terraform plan infrasturcture
+  SendToSlack:
+  type: slack-notifier
+  stage: notify
+  arguments:
+    SLACK_HOOK_URL: '${{SLACK_WEBHOOK_URL}}'
+    SLACK_TEXT: 'This is test message'
 
 
 
