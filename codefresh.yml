@@ -16,6 +16,7 @@ steps:
     title: Deploying Terraform plan
     stage: infra_build
     commands:
+      - terraform init infrasturcture
       - terraform plan infrasturcture
   SendToSlack:
     type: slack-notifier
