@@ -19,7 +19,6 @@ steps:
       - terraform init infrasturcture
       - terraform plan infrasturcture
   SendToSlack:
-sendSlack:
     title: notifySlack
     stage: notify
     image: 'codefreshplugins/slack-message-sender:0.1'
